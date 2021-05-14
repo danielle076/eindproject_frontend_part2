@@ -1,0 +1,78 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.h1 {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.nutrients {
+    margin: 15px auto 15px auto;
+    padding: 15px 80px 15px 80px;
+    border-radius: 6px;
+    background-color: white;
+    box-shadow: 0 5px 15px 5px rgba(100, 100, 100, 0.5);
+}
+
+.nutrients ul {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    justify-content: space-between;
+    text-shadow: hsl(70, 62%, 50%) 1px 0 10px;
+}
+
+.nutrients ul li {
+    padding: 0 30px 0 30px ;
+}
+
+ul {
+    list-style: none;
+}
+
+.meals {
+    display: flex;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 150px;
+    background-color: hsl(70, 62%, 50%);
+    color: #000;
+    font-size: 12px;
+    text-shadow: none;
+    text-align: center;
+    padding: 2px 2px;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -100px;
+    position: absolute;
+    z-index: 1;
+    border-radius: 6px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+@media only screen and (max-width: 1024px) {
+    .meals {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nutrients ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+}

@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+## App 'summer body'
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### Table of Contents
 
-## Available Scripts
+1. Introduction
+2. Problem
+3. API keys
+4. Starting the application
+5. Unit test
 
-In the project directory, you can run:
+### 1. Introduction
 
-### `npm start`
+This frontend programming final assignment was created as a result of the Frontend Development course at NOVI University of Applied Sciences.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The project was set up with [Create React App](https://github.com/facebook/create-react-app).
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![screen.png](src/assets/screen.png)
 
-### `npm test`
+### 2. Problem and solution
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Summer is coming and we all want a beautiful, healthy body on the beach, but how do we do this? Besides working up a sweat at the gym, good nutrition is important. Taking in the right amount of calories each day will reduce fat and keep your body in good shape.
 
-### `npm run build`
+This app, after you enter the calories, provides three meals with the right amount of calories at the push of a button. How to make the meals, is on an external website linked to.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 3. API keys
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The API keys used for this project come from [Spoonacular](https://spoonacular.com/food-api/) and
+[Firebase](https://firebase.google.com/firebase). These will be sent along in a separate file called `.env`. Registering can be done on the `register` page when you have started the application.
+### 4. Starting the application
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Once you have copied the project to your local machine, first install the `node_modules` by running the following commands in the terminal:
 
-### `npm run eject`
+- `npm install`
+- `npm install axios`
+- `npm install react-router-dom`
+- `npm install firebase`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+When this is done, you can save the API keys from the `.env` file to the root of the project. In the terminal run the following:
+- `npm run build`
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+You start the application by using:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- `npm start`
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Open http://localhost:3000 to view the page in the browser.
 
-## Learn More
+### 5. Unit test
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+A unit test can be found in the directory `src/__test__` and run with:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`npm run test`

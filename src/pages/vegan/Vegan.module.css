@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+section {
+    margin: 20px 0 10px 0;
+}
+
+.food {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    text-align: center;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    vertical-align: middle;
+    margin: 5px 10px 5px 0;
+    font-family: 'Open Sans', sans-serif, 'Roboto', sans-serif;
+}
+
+.button {
+    padding: 8px 15px;
+    background-color: hsl(70, 62%, 50%);
+    color: black;
+    border: none;
+    border-radius: 6px;
+    font-family: 'Open Sans', sans-serif, 'Roboto', sans-serif;
+}
+
+button:hover {
+    cursor: pointer;
+    border-radius: 16px;
+}
+
+.error {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-size: 15px;
+    color: red;
+    margin-top: 10px;
+}
+
+.loader {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 15px;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+}
+
+@keyFrames spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
