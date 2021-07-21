@@ -1,6 +1,6 @@
 ## App 'summer body'
 
-### Table of Contents
+### Table of contents
 
 1. Introduction
 2. Problem
@@ -8,7 +8,7 @@
 4. Starting the application
 5. Unit test
 
-### 1. Introduction
+### 1. Project introduction
 
 This frontend programming final assignment was created as a result of the Frontend Development course at NOVI University of Applied Sciences.
 
@@ -20,7 +20,7 @@ The project was set up with [Create React App](https://github.com/facebook/creat
 
 Summer is coming and we all want a beautiful, healthy body on the beach, but how do we do this? Besides working up a sweat at the gym, good nutrition is important. Taking in the right amount of calories each day will reduce fat and keep your body in good shape.
 
-This app, after you enter the calories, provides three meals with the right amount of calories at the push of a button. How to make the meals, is on an external website linked to.
+This app, after you enter the calories, provides three meals with the right amount of calories at the push of a button. How to make the meals, is on an external website linked to. There is also a secret page you can access when you register.
 
 ### 3. API keys
 
