@@ -62,7 +62,7 @@ function Register() {
                 placeholder="Username"
                 ref={userNameRef}
                 required
-                className="input"
+                className={styles.input}
             />
             <input
                 type="email"
@@ -71,7 +71,7 @@ function Register() {
                 placeholder="Email"
                 ref={emailRef}
                 required
-                className="input"
+                className={styles.input}
             />
             <input
                 type="password"
@@ -79,7 +79,7 @@ function Register() {
                 id="password-field"
                 ref={passwordRef} required
                 placeholder="Password"
-                className="input"
+                className={styles.input}
             />
             <input
                 type="password"
@@ -87,7 +87,7 @@ function Register() {
                 id="confirmation-field"
                 placeholder="Password confirmation"
                 ref={passwordConfirmRef} required
-                className="input"
+                className={styles.input}
             />
             <Button
                 disabled={loading}

@@ -4,6 +4,7 @@ import axios from 'axios';
 import Nutrients from '../../components/nutrients/Nutrients'
 import {ReactComponent as LoadingIcon} from '../../assets/loading.svg'
 import Button from "../../components/button/Button";
+import Input from "../../components/input/Input";
 
 function Vegan() {
     const [food, setFood] = useState(null);
@@ -45,9 +46,8 @@ function Vegan() {
             {error && <p className={styles.error}>{error}</p>}
             <div>
                 <section className={styles.food}>
-                    <input
-                        type='number'
-                        placeholder='Enter calories'
+                    <Input
+                        inputText='Enter calories'
                         onChange={handleChange}
                         onKeyPress={handleKeyPress}
                     />

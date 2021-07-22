@@ -47,7 +47,7 @@ function Login() {
                 id="email"
                 placeholder="Email"
                 ref={emailRef} required
-                className="input"
+                className={styles.input}
             />
             <input
                 type="password"
@@ -55,7 +55,7 @@ function Login() {
                 id="password-field"
                 ref={passwordRef} required
                 placeholder="Password"
-                className="input"
+                className={styles.input}
             />
             <Button
                 disabled={loading}

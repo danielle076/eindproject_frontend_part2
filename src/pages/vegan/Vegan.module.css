@@ -10,16 +10,6 @@ section {
     justify-content: center;
 }
 
-input {
-    text-align: center;
-    padding: 8px;
-    border-radius: 6px;
-    border: none;
-    vertical-align: middle;
-    margin: 5px 10px 5px 0;
-    font-family: 'Open Sans', sans-serif, 'Roboto', sans-serif;
-}
-
 .error {
     display: flex;
     align-items: center;
