@@ -3,6 +3,7 @@ import styles from './Vegan.module.css';
 import axios from 'axios';
 import Nutrients from '../../components/nutrients/Nutrients'
 import {ReactComponent as LoadingIcon} from '../../assets/loading.svg'
+import Button from "../../components/button/Button";
 
 function Vegan() {
     const [food, setFood] = useState(null);
@@ -50,16 +51,13 @@ function Vegan() {
                         onChange={handleChange}
                         onKeyPress={handleKeyPress}
                     />
-                    <button
+                    <Button
                         onClick={() => {
                             foodData();
                             setDisabled(true);
                         }}
-                        disabled={disabled}
-                        className={styles.button}
-                    >
-                        Click for your daily meals
-                    </button>
+                        buttonText="Click for your daily meals"
+                    />
                 </section>
                 {loading && <LoadingIcon className={styles.loader}/>}
                 {food && <Nutrients mealsData={food}/>}
