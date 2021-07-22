@@ -1,24 +1,40 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
+import {useForm} from "react-hook-form";
 import styles from './Register.module.css';
+import {useAuth} from '../../context/AuthContext';
 import {Link, useHistory} from 'react-router-dom';
-import app from '../../modules/firebase';
-import UserInput from '../../components/input/UserInput';
+import Button from "../../components/button/Button";
+
+export const validateEmail = (value) => {
+    if (value.includes("@")) {
+        return true
+    } else {
+        return `Your email must contain an @.`
+    }
+}
 
 function Register() {
-    const history = useHistory();
-    const [error, setError] = useState('');
+    const {handleSubmit} = useForm()
+    const emailRef = useRef()
+    const userNameRef = useRef()
+    const passwordRef = useRef()
+    const passwordConfirmRef = useRef()
+    const {signup} = useAuth()
+    const [error, setError] = useState('')
     const [loading, toggleLoading] = useState('');
     const [registerSuccess, toggleRegisterSuccess] = useState(false);
+    const history = useHistory()
 
-    const onSubmit = async event => {
-        setError('');
-        toggleLoading('true')
-
+    async function onSubmit() {
+        if (passwordRef.current.value !==
+            passwordConfirmRef.current.value) {
+            return setError('Passwords do not match')
+        }
         try {
-            event.preventDefault();
-            const [email, password] = event.target;
-            const user = await app.auth().createUserWithEmailAndPassword(email.value, password.value);
-            console.log(user);
+            setError('')
+            toggleLoading('true')
+            const result = await signup(emailRef.current.value, passwordRef.current.value, userNameRef.current.value)
+            console.log(result)
 
             toggleRegisterSuccess(true);
 
@@ -26,28 +42,65 @@ function Register() {
                 history.push('/login');
             }, 2000);
 
-        } catch(error){
+        } catch {
             setError('Something went wrong when retrieving the data.')
             console.error(error)
         }
         toggleLoading(false);
     }
 
-    return (
-        <main className={styles.form}>
-            <form onSubmit={onSubmit} className={styles.register}>
-                {error && <p className={styles.error}>{error}</p>}
-                {loading && <p className={styles.loading}>Data is being loaded...</p>}
+    return <main className={styles.form}>
+        <form onSubmit={handleSubmit(onSubmit)} className={styles.register}>
+            {error && <p className={styles.error}>{error}</p>}
+            {loading && <p className={styles.loading}>Data is being loaded...</p>}
 
-                <h1 className={styles.h1}>Register for juicy stuff</h1>
-                <UserInput/>
+            <h1 className={styles.h1}>Register for juicy stuff</h1>
+            <input
+                type="text"
+                name="username"
+                id="username"
+                placeholder="Username"
+                ref={userNameRef}
+                required
+                className="input"
+            />
+            <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="Email"
+                ref={emailRef}
+                required
+                className="input"
+            />
+            <input
+                type="password"
+                name="password"
+                id="password-field"
+                ref={passwordRef} required
+                placeholder="Password"
+                className="input"
+            />
+            <input
+                type="password"
+                name="password-confirmation"
+                id="confirmation-field"
+                placeholder="Password confirmation"
+                ref={passwordConfirmRef} required
+                className="input"
+            />
+            <Button
+                disabled={loading}
+                buttonText="Register"
+            />
 
-                {registerSuccess === true && <p className={styles.p}>Registration has succeeded! You can log in now.</p>}
+            {registerSuccess === true && <p className={styles.p}>Registration has succeeded! You can log in now.</p>}
 
-                <p className={styles.p}>Do you already have an account? Log in <Link to='/login' className={styles.link}>here</Link>.</p>
-            </form>
-        </main>
-    );
+        </form>
+
+        <p className={styles.p}>Do you already have an account? Log in <Link to='/login'
+                                                                             className={styles.link}>here</Link>.</p>
+    </main>
 }
 
-export default Register
+export default Register;
