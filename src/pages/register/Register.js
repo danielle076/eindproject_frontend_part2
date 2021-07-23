@@ -5,7 +5,7 @@ import {useAuth} from '../../context/AuthContext';
 import {Link, useHistory} from 'react-router-dom';
 import Button from "../../components/button/Button";
 
-export const validateEmail = (value) => {
+export const checkEmail = (value) => {
     if (value.includes("@")) {
         return true
     } else {
