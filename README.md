@@ -26,21 +26,20 @@ This app, after you enter the calories, provides three meals with the right amou
 
 The API keys used for this project come from [Spoonacular](https://spoonacular.com/food-api/) and
 [Firebase](https://firebase.google.com/firebase). These will be sent along in a separate file called `.env`. Registering can be done on the `register` page when you have started the application.
+
 ### 4. Starting the application
 
 Once you have copied the project to your local machine, first install the `node_modules` by running the following commands in the terminal:
 
-- `npm install`
-- `npm install axios`
-- `npm install react-router-dom`
-- `npm install firebase`
+`npm install`
 
-When this is done, you can save the API keys from the `.env` file to the root of the project. In the terminal run the following:
-- `npm run build`
+When this is done, you can save the API keys from the `.env` file to the root of the project. This file is sent separately with the project. In the terminal run the following:
+
+`npm run build`
 
 You start the application by using:
 
-- `npm start`
+`npm start`
 
 Open http://localhost:3000 to view the page in the browser.
 
