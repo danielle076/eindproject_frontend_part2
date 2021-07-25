@@ -6,6 +6,7 @@ function Button({disabled, buttonText, onClick}) {
                    className={styles.button}
                    disabled={disabled}
                    onClick={onClick}
+                   data-testid='testButton'
     >{buttonText}</button>
 }
 
