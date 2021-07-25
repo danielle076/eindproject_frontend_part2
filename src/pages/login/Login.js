@@ -1,9 +1,9 @@
 import React, {useRef, useState} from 'react';
-import {useForm} from "react-hook-form";
+import {useForm} from 'react-hook-form';
 import styles from './Login.module.css';
 import {useAuth} from '../../context/AuthContext';
 import {Link, useHistory} from 'react-router-dom';
-import Button from "../../components/button/Button";
+import Button from '../../components/button/Button';
 
 function Login() {
     const {handleSubmit} = useForm();
@@ -20,12 +20,13 @@ function Login() {
         try {
             setError('')
             toggleLoading('true')
+            // eslint-disable-next-line
             const result = await login(emailRef.current.value, passwordRef.current.value)
 
             toggleLoginSuccess(true);
 
             setTimeout(() => {
-                history.push('/secret');
+                history.push('/user');
             }, 2000);
 
         } catch {
@@ -42,30 +43,31 @@ function Login() {
 
             <h1 className={styles.h1}>My Account</h1>
             <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email"
+                type='email'
+                name='email'
+                id='email'
+                placeholder='Email'
                 ref={emailRef} required
                 className={styles.input}
             />
             <input
-                type="password"
-                name="password"
-                id="password-field"
+                type='password'
+                name='password'
+                id='password-field'
                 ref={passwordRef} required
-                placeholder="Password"
+                placeholder='Password'
                 className={styles.input}
             />
             <Button
                 disabled={loading}
-                buttonText="Login"
+                buttonText='Login'
             />
 
             {loginSuccess === true && <p className={styles.p}>Login succeeded! You will now go to the secret page.</p>}
 
         </form>
         <p className={styles.p}>Don't have an account yet? Then <Link to='/register' className={styles.link}>register</Link> first.</p>
+        <p className={styles.p}>Have you forgotten your password? Then click <Link to='/password' className={styles.link}>here</Link>.</p>
     </main>
 }
 

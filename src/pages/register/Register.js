@@ -1,12 +1,12 @@
 import React, {useRef, useState} from 'react';
-import {useForm} from "react-hook-form";
+import {useForm} from 'react-hook-form';
 import styles from './Register.module.css';
 import {useAuth} from '../../context/AuthContext';
 import {Link, useHistory} from 'react-router-dom';
-import Button from "../../components/button/Button";
+import Button from '../../components/button/Button';
 
 export const checkEmail = (value) => {
-    if (value.includes("@")) {
+    if (value.includes('@')) {
         return true
     } else {
         return `Your email must contain an @.`
@@ -56,42 +56,42 @@ function Register() {
 
             <h1 className={styles.h1}>Register for juicy stuff</h1>
             <input
-                type="text"
-                name="username"
-                id="username"
-                placeholder="Username"
+                type='text'
+                name='username'
+                id='username'
+                placeholder='Username'
                 ref={userNameRef}
                 required
                 className={styles.input}
             />
             <input
-                type="email"
-                name="email"
-                id="email"
-                placeholder="Email"
+                type='email'
+                name='email'
+                id='email'
+                placeholder='Email'
                 ref={emailRef}
                 required
                 className={styles.input}
             />
             <input
-                type="password"
-                name="password"
-                id="password-field"
+                type='password'
+                name='password'
+                id='password-field'
                 ref={passwordRef} required
-                placeholder="Password"
+                placeholder='Password'
                 className={styles.input}
             />
             <input
-                type="password"
-                name="password-confirmation"
-                id="confirmation-field"
-                placeholder="Password confirmation"
+                type='password'
+                name='password-confirmation'
+                id='confirmation-field'
+                placeholder='Password confirmation'
                 ref={passwordConfirmRef} required
                 className={styles.input}
             />
             <Button
                 disabled={loading}
-                buttonText="Register"
+                buttonText='Register'
             />
 
             {registerSuccess === true && <p className={styles.p}>Registration has succeeded! You can log in now.</p>}

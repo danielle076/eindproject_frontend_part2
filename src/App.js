@@ -10,7 +10,12 @@ import Vegetarian from './pages/vegetarian/Vegetarian';
 import Vegan from './pages/vegan/Vegan';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
+import PrivateRoute from "./components/privateRoute/PrivateRoute";
+import User from "./pages/user/User";
+import Password from "./pages/password/Password";
 import Secret from './pages/secret/Secret';
+import UpdateUser from "./pages/updateUser/UpdateUser";
+
 
 function App() {
     return (
@@ -35,9 +40,19 @@ function App() {
                 <Route path='/register'>
                     <Register/>
                 </Route>
-                <Route path='/secret'>
-                    <Secret/>
+
+                <PrivateRoute path='/user'>
+                    <User/>
+                </PrivateRoute>
+                <Route path='/password'>
+                    <Password/>
                 </Route>
+                <PrivateRoute path='/secret'>
+                    <Secret/>
+                </PrivateRoute>
+                <PrivateRoute path='/update-user'>
+                    <UpdateUser/>
+                </PrivateRoute>
             </Switch>
         </>
     );
