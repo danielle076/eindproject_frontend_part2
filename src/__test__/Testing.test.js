@@ -1,4 +1,4 @@
-import toFixed from '../components/digits/Digits';
+import toFixed from '../helpers/Digits';
 import {checkEmail} from "../pages/register/Register";
 import Button from "../components/button/Button";
 import {render, screen} from '@testing-library/react';

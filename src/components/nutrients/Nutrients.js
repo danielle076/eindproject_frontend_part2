@@ -1,7 +1,7 @@
 import React from 'react';
 import Food from '../../components/food/Food'
 import styles from './Nutrients.module.css';
-import Digits from '../../components/digits/Digits'
+import Digits from '../../helpers/Digits'
 
 function Nutrients({mealsData}) {
     const nutrients = mealsData.nutrients;
