@@ -46,10 +46,10 @@ function User() {
         </div>
         <div>
             <p className={styles.p}>
-            <Button
-                onClick={handleLogout}
-                buttonText='Uitloggen'
-            />
+                <Button
+                    onClick={handleLogout}
+                    buttonText='Logout'
+                />
             </p>
         </div>
     </main>

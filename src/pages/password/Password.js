@@ -44,11 +44,10 @@ function Password() {
                 disabled={loading}
                 buttonText='Request'
             />
-
         </form>
-        <p className={styles.p}><Link to='/login' className={styles.link}>Login</Link>.</p>
-        <p className={styles.p}>No account yet? <Link to='/register' className={styles.link}>Click here</Link>.</p>
+
+        <p className={styles.p}>Don't have an account yet? <Link to='/register' className={styles.link}>Click here</Link>.</p>
     </main>
 }
 
-export default Password
+export default Password;

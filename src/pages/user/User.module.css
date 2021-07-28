@@ -14,9 +14,10 @@
     font-size: 25px;
 }
 
-.input {
-    background-color: hsl(70, 62%, 50%);
-    color: black;
+.error {
+    font-size: 13px;
+    color: red;
+    margin-bottom: 15px;
 }
 
 .p {
@@ -38,10 +39,4 @@ a:hover.link {
 
 a:visited.link {
     color: black;
-}
-
-.error {
-    font-size: 13px;
-    color: red;
-    margin-bottom: 15px;
 }

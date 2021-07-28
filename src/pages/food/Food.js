@@ -3,8 +3,8 @@ import styles from './Food.module.css';
 import axios from 'axios';
 import Nutrients from '../../components/nutrients/Nutrients'
 import {ReactComponent as LoadingIcon} from '../../assets/loading.svg'
-import Button from "../../components/button/Button";
-import Input from "../../components/input/Input";
+import Button from '../../components/button/Button';
+import Input from '../../components/input/Input';
 
 function Food() {
     const [food, setFood] = useState(null);
@@ -44,6 +44,7 @@ function Food() {
     return (
         <>
             {error && <p className={styles.error}>{error}</p>}
+
             <div>
                 <section className={styles.food}>
                     <Input
@@ -59,6 +60,7 @@ function Food() {
                         buttonText='Click for your daily meals'
                     />
                 </section>
+
                 {loading && <LoadingIcon className={styles.loader}/>}
                 {food && <Nutrients mealsData={food}/>}
             </div>

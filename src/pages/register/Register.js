@@ -94,7 +94,7 @@ function Register() {
                 buttonText='Register'
             />
 
-            {registerSuccess === true && <p className={styles.p}>Registration has succeeded! You can log in now.</p>}
+            {registerSuccess === true && <p className={styles.success}>Registration has succeeded! You can log in now.</p>}
 
         </form>
 

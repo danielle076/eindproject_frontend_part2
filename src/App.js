@@ -10,11 +10,11 @@ import Vegetarian from './pages/vegetarian/Vegetarian';
 import Vegan from './pages/vegan/Vegan';
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
-import PrivateRoute from "./components/privateRoute/PrivateRoute";
-import User from "./pages/user/User";
-import Password from "./pages/password/Password";
+import PrivateRoute from './components/privateRoute/PrivateRoute';
+import User from './pages/user/User';
+import Password from './pages/password/Password';
 import Secret from './pages/secret/Secret';
-import UpdateUser from "./pages/updateUser/UpdateUser";
+import UpdateUser from './pages/updateUser/UpdateUser';
 
 
 function App() {
@@ -40,7 +40,6 @@ function App() {
                 <Route path='/register'>
                     <Register/>
                 </Route>
-
                 <PrivateRoute path='/user'>
                     <User/>
                 </PrivateRoute>

@@ -7,16 +7,15 @@ import Button from '../../components/button/Button';
 
 function Login() {
     const {handleSubmit} = useForm();
-    const emailRef = useRef()
-    const passwordRef = useRef()
-    const {login} = useAuth()
-    const [error, setError] = useState('')
+    const emailRef = useRef();
+    const passwordRef = useRef();
+    const {login} = useAuth();
+    const [error, setError] = useState('');
     const [loading, toggleLoading] = useState('');
     const [loginSuccess, toggleLoginSuccess] = useState(false);
-    const history = useHistory()
+    const history = useHistory();
 
     async function onSubmit() {
-
         try {
             setError('')
             toggleLoading('true')
@@ -63,11 +62,14 @@ function Login() {
                 buttonText='Login'
             />
 
-            {loginSuccess === true && <p className={styles.p}>Login succeeded! You will now go to the secret page.</p>}
+            {loginSuccess === true &&
+            <p className={styles.success}>Login succeeded! You will now go to the user page.</p>}
 
         </form>
-        <p className={styles.p}>Don't have an account yet? Then <Link to='/register' className={styles.link}>register</Link> first.</p>
-        <p className={styles.p}>Have you forgotten your password? Then click <Link to='/password' className={styles.link}>here</Link>.</p>
+        <p className={styles.p}>Don't have an account yet? Then <Link to='/register'
+                                                                      className={styles.link}>register</Link> first.</p>
+        <p className={styles.p}>Have you forgotten your password, click <Link to='/password'
+                                                                              className={styles.link}>here</Link>.</p>
     </main>
 }
 

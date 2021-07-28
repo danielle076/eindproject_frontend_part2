@@ -3,8 +3,8 @@ import styles from './Vegetarian.module.css';
 import axios from 'axios';
 import Nutrients from '../../components/nutrients/Nutrients'
 import {ReactComponent as LoadingIcon} from '../../assets/loading.svg'
-import Button from "../../components/button/Button";
-import Input from "../../components/input/Input";
+import Button from '../../components/button/Button';
+import Input from '../../components/input/Input';
 
 function Vegetarian() {
     const [food, setFood] = useState(null);
@@ -44,6 +44,7 @@ function Vegetarian() {
     return (
         <>
             {error && <p className={styles.error}>{error}</p>}
+            
             <div>
                 <section className={styles.food}>
                     <Input
@@ -56,9 +57,10 @@ function Vegetarian() {
                             foodData();
                             setDisabled(true);
                         }}
-                        buttonText="Click for your daily meals"
+                        buttonText='Click for your daily meals'
                     />
                 </section>
+                
                 {loading && <LoadingIcon className={styles.loader}/>}
                 {food && <Nutrients mealsData={food}/>}
             </div>
