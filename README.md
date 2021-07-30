@@ -2,11 +2,11 @@
 
 ### Table of contents
 
-1. Introduction
-2. Problem
+1. Project introduction
+2. Problem and solution
 3. API keys
 4. Starting the application
-5. Unit test
+5. Unit tests
 
 ### 1. Project introduction
 
@@ -25,7 +25,7 @@ This app, after you enter the calories, provides three meals with the right amou
 ### 3. API keys
 
 The API keys used for this project come from [Spoonacular](https://spoonacular.com/food-api/) and
-[Firebase](https://firebase.google.com/firebase). These will be sent along in a separate file called `.env`. Registering can be done on the `register` page when you have started the application.
+[Firebase](https://firebase.google.com/firebase). These will be sent along in a separate file called `.env` and will be put into the system in step 4 of this manual. Registering can be done on the `register` page when you have started the application.
 
 ### 4. Starting the application
 
@@ -43,8 +43,8 @@ You start the application by using:
 
 Open http://localhost:3000 to view the page in the browser.
 
-### 5. Unit test
+### 5. Unit tests
 
-A unit test can be found in the directory `src/__test__` and run with:
+The unit tests can be found in the directory `src/__test__` and run with:
 
 `npm run test`
