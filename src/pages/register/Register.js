@@ -54,7 +54,7 @@ function Register() {
             {error && <p className={styles.error}>{error}</p>}
             {loading && <p className={styles.loading}>Data is being loaded...</p>}
 
-            <h1 className={styles.h1}>Register for juicy stuff</h1>
+            <h1 className={styles.h1}>Create an account 🔒</h1>
             <input
                 type='text'
                 name='username'

@@ -31,6 +31,7 @@ function Header() {
             <article className={styles.article}>
                 <img className={styles.img} src={quote} alt='quote'/>
             </article>
+
         </header>
     );
 }

@@ -13,9 +13,7 @@ import Register from './pages/register/Register';
 import PrivateRoute from './components/privateRoute/PrivateRoute';
 import User from './pages/user/User';
 import Password from './pages/password/Password';
-import Secret from './pages/secret/Secret';
 import UpdateUser from './pages/updateUser/UpdateUser';
-
 
 function App() {
     return (
@@ -46,9 +44,6 @@ function App() {
                 <Route path='/password'>
                     <Password/>
                 </Route>
-                <PrivateRoute path='/secret'>
-                    <Secret/>
-                </PrivateRoute>
                 <PrivateRoute path='/update-user'>
                     <UpdateUser/>
                 </PrivateRoute>

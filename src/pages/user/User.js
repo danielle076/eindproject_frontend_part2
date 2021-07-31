@@ -21,27 +21,21 @@ function User() {
 
     return <main className={styles.form}>
         <div>
-            <h1 className={styles.h1}>User information</h1>
-            <div>
-                {error && <p className={styles.error}> {error} </p>}
+            <h1 className={styles.h1}>Hello {currentUser && currentUser.displayName} 👋</h1>
+            <p className={styles.p}>This is your user information.</p>
 
-                <p className={styles.p}><strong>Username: </strong>
+            {error && <p className={styles.error}> {error} </p>}
+
+            <div>
+                <p className={styles.info}><strong>Username: </strong>
                     {currentUser && currentUser.displayName}
                 </p>
-                <p className={styles.p}><strong>Email: </strong>
+                <p className={styles.info}><strong>Email: </strong>
                     {currentUser && currentUser.email}
                 </p>
-                <p className={styles.p}>
-                    <Link to='/secret' className={styles.link}>
-                        Go to the secret page
-                    </Link>
+                <p className={styles.p}> ✏️ You can update your user information <Link to='/update-user'
+                                                                                       className={styles.link}>here</Link>.
                 </p>
-                <p className={styles.p}>
-                    <Link to='/update-user' className={styles.link}>
-                        Update user information
-                    </Link>
-                </p>
-
             </div>
         </div>
         <div>

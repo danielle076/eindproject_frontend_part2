@@ -40,7 +40,7 @@ function Login() {
             {error && <p className={styles.error}>{error}</p>}
             {loading && <p className={styles.loading}>Data is being loaded...</p>}
 
-            <h1 className={styles.h1}>My Account</h1>
+            <h1 className={styles.h1}>My Account login 🔒</h1>
             <input
                 type='email'
                 name='email'
