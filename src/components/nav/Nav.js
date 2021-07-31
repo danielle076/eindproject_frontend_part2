@@ -20,6 +20,9 @@ function Nav() {
                     <li>
                         <NavLink to='/vegan' activeClassName={styles['active-link']}>Vegan</NavLink>
                     </li>
+                    <li>
+                        <NavLink to='/contact' activeClassName={styles['active-link']}>Contact</NavLink>
+                    </li>
                     <li className={styles.right}>
                         <NavLink to='/login' activeClassName={styles['active-link']}>Login</NavLink>
                     </li>

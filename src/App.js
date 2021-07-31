@@ -8,6 +8,7 @@ import Home from './pages/home/Home';
 import Food from './pages/food/Food';
 import Vegetarian from './pages/vegetarian/Vegetarian';
 import Vegan from './pages/vegan/Vegan';
+import Contact from "./pages/contact/Contact";
 import Login from './pages/login/Login';
 import Register from './pages/register/Register';
 import PrivateRoute from './components/privateRoute/PrivateRoute';
@@ -31,6 +32,9 @@ function App() {
                 </Route>
                 <Route path='/vegan'>
                     <Vegan/>
+                </Route>
+                <Route path='/contact'>
+                    <Contact/>
                 </Route>
                 <Route path='/login'>
                     <Login/>
