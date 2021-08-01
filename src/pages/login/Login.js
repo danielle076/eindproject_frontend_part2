@@ -17,10 +17,10 @@ function Login() {
 
     async function onSubmit() {
         try {
-            setError('')
-            toggleLoading('true')
+            setError('');
+            toggleLoading('true');
             // eslint-disable-next-line
-            const result = await login(emailRef.current.value, passwordRef.current.value)
+            const result = await login(emailRef.current.value, passwordRef.current.value);
 
             toggleLoginSuccess(true);
 
@@ -30,7 +30,7 @@ function Login() {
 
         } catch {
             setError('Something went wrong when retrieving the data.')
-            console.error(error)
+            console.error(error);
         }
         toggleLoading(false);
     }

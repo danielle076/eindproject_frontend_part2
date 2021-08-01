@@ -31,7 +31,7 @@ export function AuthContextProvider({children}) {
     }
 
     function resetPassword(email) {
-        return auth.sendPasswordResetEmail(email)
+        return auth.sendPasswordResetEmail(email);
     }
 
     function updateEmail(email) {
@@ -46,9 +46,9 @@ export function AuthContextProvider({children}) {
         const unsubscribe = auth.onAuthStateChanged(user => {
             setCurrentUser(user);
             setLoading(false);
-        })
+        });
         return unsubscribe
-    }, [])
+    }, []);
 
     const value = {
         currentUser,

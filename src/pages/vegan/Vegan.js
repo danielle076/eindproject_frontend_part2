@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import styles from './Vegan.module.css';
 import axios from 'axios';
-import Nutrients from '../../components/nutrients/Nutrients'
-import {ReactComponent as LoadingIcon} from '../../assets/loading.svg'
+import Nutrients from '../../components/nutrients/Nutrients';
+import {ReactComponent as LoadingIcon} from '../../assets/loading.svg';
 import Button from '../../components/button/Button';
 import Input from '../../components/input/Input';
 
@@ -15,7 +15,7 @@ function Vegan() {
 
     async function foodData() {
         setError('');
-        toggleLoading('true')
+        toggleLoading('true');
 
         try {
             const result = await axios.get(`https://api.spoonacular.com/mealplanner/generate?apiKey=${process.env.REACT_APP_API_KEY}&timeFrame=day&targetCalories=${calories}&diet=vegan`);

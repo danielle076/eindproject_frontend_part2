@@ -6,24 +6,24 @@ import {Link} from 'react-router-dom';
 import Button from '../../components/button/Button';
 
 function Password() {
-    const {handleSubmit} = useForm()
-    const emailRef = useRef()
-    const {resetPassword} = useAuth()
-    const [error, setError] = useState('')
-    const [loading, setLoading] = useState(false)
-    const [message, setMessage] = useState('')
+    const {handleSubmit} = useForm();
+    const emailRef = useRef();
+    const {resetPassword} = useAuth();
+    const [error, setError] = useState('');
+    const [loading, setLoading] = useState(false);
+    const [message, setMessage] = useState('');
 
     async function onSubmit() {
         try {
-            setMessage('')
-            setError('')
-            setLoading(true)
-            await resetPassword(emailRef.current.value)
-            setMessage('Check your inbox for further instructions')
+            setMessage('');
+            setError('');
+            setLoading(true);
+            await resetPassword(emailRef.current.value);
+            setMessage('Check your inbox for further instructions');
         } catch {
-            setError('Failed to reset')
+            setError('Failed to reset');
         }
-        setLoading(false)
+        setLoading(false);
     }
 
     return <main className={styles.form}>

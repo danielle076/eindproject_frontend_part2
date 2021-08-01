@@ -67,7 +67,6 @@ function Contact() {
             {messageSuccess === true &&
             <p className={styles.success}>Your message has been sent successfully.</p>}
         </form>
-
     </main>
 }
 

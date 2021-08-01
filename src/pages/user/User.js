@@ -5,17 +5,17 @@ import {Link, useHistory} from 'react-router-dom';
 import Button from '../../components/button/Button';
 
 function User() {
-    const [error, setError] = useState('')
-    const {currentUser, logout} = useAuth()
-    const history = useHistory()
+    const [error, setError] = useState('');
+    const {currentUser, logout} = useAuth();
+    const history = useHistory();
 
     async function handleLogout() {
-        setError('')
+        setError('');
         try {
-            await logout()
-            history.push('/')
+            await logout();
+            history.push('/');
         } catch {
-            setError('Failed to log out')
+            setError('Failed to log out');
         }
     }
 

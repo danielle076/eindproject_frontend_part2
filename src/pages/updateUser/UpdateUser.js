@@ -8,7 +8,7 @@ import styles from './UpdateUser.module.css';
 function UpdateUser() {
     const {handleSubmit} = useForm();
     const emailRef = useRef();
-    const passwordRef = useRef()
+    const passwordRef = useRef();
     const passwordConfirmRef = useRef();
     const {currentUser, updatePassword, updateEmail} = useAuth();
     const [error, setError] = useState('');
@@ -18,25 +18,25 @@ function UpdateUser() {
     function onSubmit() {
         if (passwordRef.current.value !==
             passwordConfirmRef.current.value) {
-            return setError('passwords do not match')
+            return setError('passwords do not match');
         }
 
         const promises = []
-        setError('')
-        toggleLoading('true')
+        setError('');
+        toggleLoading('true');
 
         if (emailRef.current.value !== currentUser.email) {
-            promises.push(updateEmail(emailRef.current.value))
+            promises.push(updateEmail(emailRef.current.value));
         }
         if (passwordRef.current.value) {
-            promises.push(updatePassword(passwordRef.current.value))
+            promises.push(updatePassword(passwordRef.current.value));
         }
 
         Promise.all(promises).then(() => {
-            history.push('/user')
+            history.push('/user');
         }).catch(() => {
-            setError('Failed to update')
-            console.error(error)
+            setError('Failed to update');
+            console.error(error);
         }).finally(() => {
             toggleLoading(false);
         })

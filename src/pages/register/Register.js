@@ -14,27 +14,27 @@ export const checkEmail = (value) => {
 }
 
 function Register() {
-    const {handleSubmit} = useForm()
-    const emailRef = useRef()
-    const userNameRef = useRef()
-    const passwordRef = useRef()
-    const passwordConfirmRef = useRef()
-    const {signup} = useAuth()
-    const [error, setError] = useState('')
+    const {handleSubmit} = useForm();
+    const emailRef = useRef();
+    const userNameRef = useRef();
+    const passwordRef = useRef();
+    const passwordConfirmRef = useRef();
+    const {signup} = useAuth();
+    const [error, setError] = useState('');
     const [loading, toggleLoading] = useState('');
     const [registerSuccess, toggleRegisterSuccess] = useState(false);
-    const history = useHistory()
+    const history = useHistory();
 
     async function onSubmit() {
         if (passwordRef.current.value !==
             passwordConfirmRef.current.value) {
-            return setError('Passwords do not match')
+            return setError('Passwords do not match');
         }
         try {
-            setError('')
-            toggleLoading('true')
-            const result = await signup(emailRef.current.value, passwordRef.current.value, userNameRef.current.value)
-            console.log(result)
+            setError('');
+            toggleLoading(true);
+            const result = await signup(emailRef.current.value, passwordRef.current.value, userNameRef.current.value);
+            console.log(result);
 
             toggleRegisterSuccess(true);
 
@@ -43,8 +43,8 @@ function Register() {
             }, 2000);
 
         } catch {
-            setError('Something went wrong when retrieving the data.')
-            console.error(error)
+            setError('Something went wrong when retrieving the data.');
+            console.error(error);
         }
         toggleLoading(false);
     }
@@ -94,7 +94,8 @@ function Register() {
                 buttonText='Register'
             />
 
-            {registerSuccess === true && <p className={styles.success}>Registration has succeeded! You can log in now.</p>}
+            {registerSuccess === true &&
+            <p className={styles.success}>Registration has succeeded! You can log in now.</p>}
 
         </form>
 

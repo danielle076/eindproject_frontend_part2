@@ -37,6 +37,7 @@
     background-color: hsl(70, 62%, 50%);
     color: black;
     margin-top: 5px;
+    font-family: 'Open Sans', sans-serif, 'Roboto', sans-serif;
 }
 
 .success {
